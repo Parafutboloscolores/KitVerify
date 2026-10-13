@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KitVerify - Autenticación y Cuidado de Camisetas de Fútbol de Colección</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0B0F19',
+                            card: '#131C2E',
+                            accent: '#10B981', // Verde esmeralda deportivo
+                            accentHover: '#059669',
+                            gold: '#F59E0B'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;850&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-brand-dark text-gray-100 antialiased selection:bg-brand-accent selection:text-white">
+
+    <!-- HEADER / NAVBAR -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-brand-dark/80 backdrop-blur-md border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-accent to-emerald-400 flex items-center justify-center shadow-lg shadow-emerald-900/30">
+                    <svg class="w-6 h-6 text-brand-dark" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                    </svg>
+                </div>
+                <span class="text-2xl font-extrabold tracking-tight text-white">Kit<span class="text-brand-accent">Verify</span></span>
+            </div>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-300">
+                <a href="#caracteristicas" class="hover:text-brand-accent transition-colors">Características</a>
+                <a href="#como-funciona" class="hover:text-brand-accent transition-colors">Cómo Funciona</a>
+                <a href="#archivo" class="hover:text-brand-accent transition-colors">Archivo y Cuidado</a>
+            </nav>
+            <div>
+                <a href="#contacto" class="px-5 py-2.5 rounded-xl bg-brand-accent hover:bg-brand-accentHover text-brand-dark font-bold text-sm transition-all shadow-lg shadow-emerald-500/20">
+                    Acceso Anticipado
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden">
+        <!-- Background Gradient Glows -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-brand-accent/15 blur-[140px] rounded-full pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+            <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-brand-card border border-gray-700 text-xs font-semibold text-brand-accent uppercase tracking-wider">
+                    <span class="w-2 h-2 rounded-full bg-brand-accent animate-pulse"></span>
+                    <span>Inteligencia Artificial para Coleccionistas</span>
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-white">
+                    Detecta falsificaciones y protege tu <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-emerald-300">historia futbolística</span>.
+                </h1>
+                <p class="text-lg text-gray-300 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                    Verifica al instante códigos de etiquetas en portales de segunda mano y descubre los métodos profesionales para lavar, conservar y almacenar tus camisetas retro sin arruinar los vinilos.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                    <a href="#contacto" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-brand-accent hover:bg-brand-accentHover text-brand-dark font-bold text-base transition-all shadow-xl shadow-emerald-500/20 text-center">
+                        Únete a la Lista de Espera
+                    </a>
+                    <a href="#como-funciona" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-brand-card hover:bg-gray-800 border border-gray-700 text-gray-200 font-semibold text-base transition-all text-center">
+                        Conocer más
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Hero Image / Visual -->
+            <div class="lg:col-span-5">
+                <div class="relative mx-auto max-w-md lg:max-w-none">
+                    <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-brand-accent to-emerald-600 opacity-30 blur-lg"></div>
+                    <div class="relative rounded-2xl overflow-hidden border border-gray-700 bg-brand-card shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=1000&q=80" alt="Colección de camisetas" class="w-full h-80 object-cover object-center transform hover:scale-105 transition-transform duration-500">
+                        <div class="p-6 space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-semibold px-2.5 py-1 rounded bg-emerald-900/50 text-brand-accent border border-emerald-700/50">100% Verificado</span>
+                                <span class="text-xs text-gray-400">Modelo 90s Archive</span>
+                            </div>
+                            <h3 class="font-bold text-lg text-white">Análisis óptico de etiquetas y costuras</h3>
+                            <p class="text-sm text-gray-400">Escanea códigos de estilo (Style Codes) en menos de 10 segundos antes de comprar en Vinted o Wallapop.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES / CARACTERÍSTICAS -->
+    <section id="caracteristicas" class="py-24 bg-brand-card/40 border-y border-gray-800/60">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <h2 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+                    Diseñado por y para coleccionistas exigentes
+                </h2>
+                <p class="text-gray-400 text-base sm:text-lg">
+                    Resolvemos los dos grandes dolores de cabeza del coleccionismo moderno: evitar estafas con réplicas y prevenir el deterioro físico de las prendas.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="p-8 rounded-2xl bg-brand-card border border-gray-800 hover:border-brand-accent/50 transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-brand-accent/10 flex items-center justify-center text-brand-accent mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Escáner IA de Etiquetas</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Sube una foto de la etiqueta interior o código de producto y nuestra inteligencia artificial valida su autenticidad contrastando bases de datos históricas de Nike, Adidas y Umbro.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="p-8 rounded-2xl bg-brand-card border border-gray-800 hover:border-brand-accent/50 transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-brand-accent/10 flex items-center justify-center text-brand-accent mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Guía de Conservación</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Aprende cómo almacenar y proteger tus camisetas en armarios con alta humedad, evitando que los vinilos y patrocinadores antiguos se peguen o cuarteen.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="p-8 rounded-2xl bg-brand-card border border-gray-800 hover:border-brand-accent/50 transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-brand-accent/10 flex items-center justify-center text-brand-accent mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Fichas Técnicas Oficiales</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Accede al historial detallado de cada temporada, diferencias entre versiones de jugador (Player Issue) y aficionado, y el contexto de cada equipación.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS & IMAGES SECTION -->
+    <section id="como-funciona" class="py-24 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 space-y-24">
+            
+            <!-- Block 1: Verification with local image 1 -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 space-y-6">
+                    <div class="inline-block px-3 py-1 rounded bg-brand-accent/10 text-brand-accent font-semibold text-xs tracking-wider uppercase">Paso 01</div>
+                    <h2 class="text-3xl font-extrabold text-white">Escanea y verifica etiquetas en segundos</h2>
+                    <p class="text-gray-300 leading-relaxed">
+                        Cuando encuentres una ganga en portales de segunda mano, no arriesgues tu dinero. Utiliza nuestra herramienta de escaneo óptico para validar los códigos de estilo y detectar falsificaciones sofisticadas al instante.
+                    </p>
+                    <ul class="space-y-3 text-sm text-gray-300">
+                        <li class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-brand-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Análisis de sintaxis de códigos de producto (MPN).</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-brand-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Comparativa visual de bordados y tipografías originales.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="lg:col-span-6">
+                    <div class="rounded-2xl overflow-hidden border border-gray-700 shadow-2xl bg-brand-card">
+                        <!-- Imagen local proporcionada: Escaneo de etiqueta con móvil -->
+                        <img src="image_b4c0e3.jpg" alt="Escaneo de etiqueta con móvil" class="w-full h-auto object-cover">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Block 2: Archive & Storage with local image 2 -->
+            <div id="archivo" class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 order-2 lg:order-1">
+                    <div class="rounded-2xl overflow-hidden border border-gray-700 shadow-2xl bg-brand-card">
+                        <!-- Imagen local proporcionada: Armario con camisetas de los 90 -->
+                        <img src="image_b4c120.jpg" alt="Armario con camisetas de los 90" class="w-full h-auto object-cover">
+                    </div>
+                </div>
+                <div class="lg:col-span-6 space-y-6 order-1 lg:order-2">
+                    <div class="inline-block px-3 py-1 rounded bg-brand-accent/10 text-brand-accent font-semibold text-xs tracking-wider uppercase">Paso 02</div>
+                    <h2 class="text-3xl font-extrabold text-white">Almacenamiento y archivo profesional</h2>
+                    <p class="text-gray-300 leading-relaxed">
+                        Una gran colección requiere cuidados específicos. Te enseñamos los métodos óptimos de conservación, uso de láminas separadoras antiadherentes y control de temperatura para proteger tus reliquias de los 90.
+                    </p>
+                    <ul class="space-y-3 text-sm text-gray-300">
+                        <li class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-brand-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Prevención frente al calor y la humedad estacional.</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-brand-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Recetas exactas de lavado para vinilos y felpas delicadas.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTACT FORM SECTION -->
+    <section id="contacto" class="py-24 bg-brand-card/60 border-t border-gray-800">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center space-y-4 mb-12">
+                <h2 class="text-3xl font-extrabold text-white sm:text-4xl">Sé de los primeros en probar KitVerify</h2>
+                <p class="text-gray-400">Regístrate para obtener acceso anticipado a la plataforma y herramientas exclusivas para coleccionistas.</p>
+            </div>
+
+            <!-- Formulario conectado al e-mail: borja.perez.madrid@gmail.com -->
+            <form action="https://formsubmit.co/borja.perez.madrid@gmail.com" method="POST" class="bg-brand-dark p-8 md:p-12 rounded-2xl border border-gray-800 shadow-2xl space-y-6">
+                <!-- Configuraciones adicionales de FormSubmit -->
+                <input type="hidden" name="_subject" value="¡Nuevo registro en KitVerify (Lista de Espera)!">
+                <input type="hidden" name="_captcha" value="false">
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="space-y-2">
+                        <label for="nombre" class="text-sm font-semibold text-gray-300">Nombre completo</label>
+                        <input type="text" id="nombre" name="nombre" required class="w-full px-4 py-3 rounded-xl bg-brand-card border border-gray-700 text-white focus:outline-none focus:border-brand-accent transition-colors" placeholder="Ej. Borja Pérez">
+                    </div>
+                    <div class="space-y-2">
+                        <label for="email" class="text-sm font-semibold text-gray-300">Correo electrónico</label>
+                        <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-xl bg-brand-card border border-gray-700 text-white focus:outline-none focus:border-brand-accent transition-colors" placeholder="tu@correo.com">
+                    </div>
+                </div>
+
+                <div class="space-y-2">
+                    <label for="perfil" class="text-sm font-semibold text-gray-300">¿Cómo te defines como coleccionista?</label>
+                    <select id="perfil" name="perfil" class="w-full px-4 py-3 rounded-xl bg-brand-card border border-gray-700 text-white focus:outline-none focus:border-brand-accent transition-colors">
+                        <option value="coleccionista_purista">Coleccionista purista (Vintage / Histórico)</option>
+                        <option value="cazador_chollos">Comprador ocasional / Cazador de chollos en Vinted/Wallapop</option>
+                        <option value="creador_contenido">Creador de contenido / Divulgador de fútbol</option>
+                        <option value="otro">Otro entusiasta del fútbol</option>
+                    </select>
+                </div>
+
+                <div class="space-y-2">
+                    <label for="mensaje" class="text-sm font-semibold text-gray-300">¿Qué es lo que más te frustra al comprar o cuidar tus camisetas?</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" class="w-full px-4 py-3 rounded-xl bg-brand-card border border-gray-700 text-white focus:outline-none focus:border-brand-accent transition-colors resize-none" placeholder="Cuéntanos tus experiencias con falsificaciones o problemas de conservación..."></textarea>
+                </div>
+
+                <button type="submit" class="w-full py-4 rounded-xl bg-brand-accent hover:bg-brand-accentHover text-brand-dark font-extrabold text-base transition-all shadow-lg shadow-emerald-500/20">
+                    Unirme a KitVerify
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-dark border-t border-gray-800/80 py-12">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 rounded-lg bg-brand-accent flex items-center justify-center font-bold text-brand-dark text-sm">KV</div>
+                <span class="text-lg font-bold text-white">KitVerify</span>
+            </div>
+            <p class="text-sm text-gray-500 text-center md:text-left">
+                © 2026 KitVerify. Ejercicio de innovación AI T.H.I.N.K. Todos los derechos reservados.
+            </p>
+            <div class="flex space-x-6 text-sm text-gray-400">
+                <a href="#caracteristicas" class="hover:text-brand-accent transition-colors">Privacidad</a>
+                <a href="#contacto" class="hover:text-brand-accent transition-colors">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
